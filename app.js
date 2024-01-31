@@ -1,7 +1,7 @@
 // FIRELEZ Motivation
 let numeroSecreto = 0;
 let intentos = 0;
-let listanumerosorteado = [];
+let listaNumeroSorteado = [];
 let max = 10;
 
 function asignarTextoElemento(elemento,texto){
@@ -36,14 +36,14 @@ function limpiarCaja (){
 function generarNumeroSecreto() {
     let numeroGenerado = Math.floor(Math.random()*max)+1;
     console.log(numeroGenerado);
-    console.log(listaNumerosSorteados);
+    console.log(listaNumeroSorteado);
 
-    if(listanumerosorteado.length == max){
+    if(listaNumeroSorteado.length == max){
         asignarTextoElemento('p','Has adivinado todos los números posibles')
-        }else if(listanumerosorteado.includes(numeroGenerado)){
+        }else if(listaNumeroSorteado.includes(numeroGenerado)){
             return generarNumeroSecreto();
         }else{
-            listanumerosorteado.push(numeroGenerado);
+            listaNumeroSorteado.push(numeroGenerado);
             return numeroGenerado;
     }  
 }
